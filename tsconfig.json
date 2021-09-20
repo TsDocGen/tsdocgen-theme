@@ -27,7 +27,8 @@
         "jsx": "react-jsx",
         "jsxImportSource": "react",
         "allowSyntheticDefaultImports": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "skipLibCheck": true
     },
     "include": ["src", "scripts"],
     "exclude": [
