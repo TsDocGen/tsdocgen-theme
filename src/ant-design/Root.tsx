@@ -1,4 +1,3 @@
-import 'antd/dist/antd.css';
 import { HelmetData } from 'react-helmet';
 import App from './App';
 
