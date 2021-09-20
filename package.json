@@ -1,5 +1,5 @@
 {
-  "name": "tsdocgen-theme",
+  "name": "tsdocgen-themes",
   "version": "0.0.1",
   "description": "Theme base for tsdocgen",
   "main": "src/index.ts",
