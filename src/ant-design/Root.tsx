@@ -1,9 +1,8 @@
 import 'antd/dist/antd.css';
-import type { ProjectDocs } from 'tsdocgen';
 import { HelmetData } from 'react-helmet';
 import App from './App';
 
-type RootProps = { helmet: HelmetData, docs: ProjectDocs[], projectName: string }
+type RootProps = { helmet: HelmetData, docs: any[], projectName: string }
 
 const Root: React.FC<RootProps> = ({ helmet, docs, projectName }) => {
     const htmlAttrs = helmet.htmlAttributes.toComponent();

@@ -1,11 +1,10 @@
 import { Layout, Menu, Breadcrumb } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
-import { AppComponentProps } from 'tsdocgen';
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
-type AppProps = AppComponentProps;
+type AppProps = any;
 
 function App({ docs, name }: AppProps) {
     console.log(docs);
