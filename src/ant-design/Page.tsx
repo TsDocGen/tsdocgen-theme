@@ -1,4 +1,6 @@
-const Page: React.FC = () => {
+import { PageComponentProps } from "tsdocgen";
+
+const Page: React.FC<PageComponentProps> = () => {
     return <div>Page</div>;
 }
 
