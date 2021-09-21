@@ -6,8 +6,8 @@ const { Header, Content, Sider } = Layout;
 
 type AppProps = any;
 
-function App({ docs, name }: AppProps) {
-    console.log(docs);
+function App({ doc, name }: AppProps) {
+    console.log(doc);
     console.log(name);
     return (
         <Layout>
