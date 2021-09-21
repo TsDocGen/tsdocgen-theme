@@ -2,8 +2,8 @@
   "name": "tsdocgen-themes",
   "version": "0.0.1",
   "description": "Theme base for tsdocgen",
-  "main": "dist/src/index.js",
-  "types": "dist/src/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "exec": "ts-node ./scripts/tsdocgen",
@@ -18,7 +18,6 @@
     "@types/node": "^16.9.1",
     "@types/react-helmet": "^6.1.2",
     "ts-node": "^10.2.1",
-    "tsdocgen": "https://github.com/TsDocGen/tsdocgen.git",
     "typescript": "^4.4.3"
   },
   "dependencies": {
