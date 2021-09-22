@@ -1,6 +1,6 @@
 import { Card } from "antd";
 import React from "react";
-import { PropertyComponentProps } from 'tsdocgen';
+import type { PropertyComponentProps } from 'tsdocgen';
 
 const Property: React.FC<PropertyComponentProps> = ({ property }) => {
     return (

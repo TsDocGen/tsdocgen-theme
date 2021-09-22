@@ -17,7 +17,8 @@
     "@types/lodash": "^4.14.173",
     "@types/node": "^16.9.1",
     "@types/react-helmet": "^6.1.2",
-    "@types/styled-components": "^5.1.14"
+    "@types/styled-components": "^5.1.14",
+    "tsdocgen": "https://github.com/TsDocGen/tsdocgen.git"
   },
   "dependencies": {
     "@types/react": "^17.0.21",
@@ -29,7 +30,6 @@
     "react-helmet": "^6.1.0",
     "styled-components": "^5.3.1",
     "ts-node": "^10.2.1",
-    "tsdocgen": "https://github.com/TsDocGen/tsdocgen.git",
     "typescript": "^4.4.3"
   },
   "peerDependencies": {}

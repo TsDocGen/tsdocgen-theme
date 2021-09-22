@@ -1,5 +1,5 @@
 import { Typography } from 'antd';
-import { PageProps } from 'tsdocgen';
+import type { PageProps } from 'tsdocgen';
 import Layout from '../Layout';
 
 const { Title, Paragraph } = Typography;
