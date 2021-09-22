@@ -1,17 +1,30 @@
+import React from 'react';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
+import { createGlobalStyle } from 'styled-components';
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
-type AppProps = any;
+type AppLayoutProps = {
+    projectName: string
+};
 
-function App({ doc, name }: AppProps) {
-    console.log(doc);
-    console.log(name);
+const GlobalStyles = createGlobalStyle`
+    #___gatsby,
+    #gatsby-focus-wrapper {
+        height: 100%;
+        width: 100%;
+    }
+`;
+
+const AppLayout: React.FC<AppLayoutProps> = ({ projectName, children }) => {
+    console.log(projectName);
     return (
-        <Layout>
-            <Header className="header">
+        <>
+        <GlobalStyles />
+        <Layout style={{ height: '100%' }}>
+            <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
                 <div className="logo" />
                 <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
                     <Menu.Item key="1">nav 1</Menu.Item>
@@ -61,28 +74,13 @@ function App({ doc, name }: AppProps) {
                             minHeight: 280,
                         }}
                     >
-                        Content
+                        {children}
                     </Content>
                 </Layout>
             </Layout>
         </Layout>
-        // <div>
-        //     <h1>{name}</h1>
-        //     {docs.map((doc) => {
-        //         return (
-        //             <div key={doc.name}>
-        //                 <h2>{doc.name}</h2>
-        //                 {doc.docs.map((doc: any) => {
-        //                 const json = doc.toJSON();
-        //                     return (
-        //                         <pre key={json.name}>{JSON.stringify(json, null, 2)}</pre>
-        //                     )
-        //                 })}
-        //             </div>
-        //         )
-        //     })}
-        // </div>
+        </>
     );
 };
 
-export default App;
+export default AppLayout;
