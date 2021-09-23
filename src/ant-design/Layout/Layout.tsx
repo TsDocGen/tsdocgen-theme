@@ -18,8 +18,7 @@ const GlobalStyles = createGlobalStyle`
     }
 `;
 
-const AppLayout: React.FC<AppLayoutProps> = ({ projectName, children }) => {
-    console.log(projectName);
+const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
     return (
         <>
         <GlobalStyles />
@@ -32,7 +31,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({ projectName, children }) => {
                     <Menu.Item key="3">nav 3</Menu.Item>
                 </Menu>
             </Header>
-            <Layout>
+            <Layout style={{ marginTop: '64px' }}>
                 <Sider width={200} className="site-layout-background">
                     <Menu
                         mode="inline"
