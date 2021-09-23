@@ -1,17 +1,16 @@
 import { Typography } from 'antd';
 import type { PageProps } from 'tsdocgen';
-import Layout from '../Layout';
 
 const { Title, Paragraph } = Typography;
 
-const Page: React.FC<PageProps> = ({ doc, projectName }) => {
+const Page: React.FC<PageProps> = ({ doc }) => {
     return (
-        <Layout projectName={projectName}>
+        <>
             <Title>{doc.name}</Title>
             <Paragraph>
                 {doc.jsDoc.description}
             </Paragraph>
-        </Layout>
+        </>
     );
 }
 
