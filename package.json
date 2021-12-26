@@ -1,29 +1,27 @@
 {
-  "name": "tsdocgen-themes",
-  "version": "0.0.1",
+  "name": "@tsdocgen/themes",
+  "version": "0.0.3",
   "description": "Theme base for tsdocgen",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "exec": "ts-node ./scripts/tsdocgen",
-    "build": "rm -rf dist && tsc -p tsconfig.json"
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "prepublishOnly": "yarn run build"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run build"
     }
   },
   "author": "Zerry Hogan",
   "license": "ISC",
   "devDependencies": {
+    "@tsdocgen/core": "^0.0.2",
     "@types/glob": "^7.1.4",
     "@types/lodash": "^4.14.173",
     "@types/node": "^16.9.1",
     "@types/react-helmet": "^6.1.2",
     "@types/styled-components": "^5.1.14",
-    "husky": "^7.0.2",
-    "tsdocgen": "https://github.com/TsDocGen/tsdocgen.git"
+    "husky": "^7.0.2"
   },
   "dependencies": {
     "@types/react": "^17.0.21",
@@ -37,5 +35,10 @@
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
   },
-  "peerDependencies": {}
+  "peerDependencies": {},
+  "files": [
+    "dist",
+    "ant-design.d.ts",
+    "ant-design.js"
+  ]
 }

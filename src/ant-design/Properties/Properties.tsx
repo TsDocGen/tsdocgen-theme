@@ -1,6 +1,6 @@
 import { Typography } from "antd";
 import React from "react";
-import type { PropertiesComponentProps } from 'tsdocgen';
+import type { PropertiesComponentProps } from '@tsdocgen/core';
 import Property from "../Property";
 
 const { Title } = Typography;

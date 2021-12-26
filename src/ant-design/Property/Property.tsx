@@ -1,6 +1,6 @@
 import { Card, Typography } from "antd";
 import React from "react";
-import type { PropertyComponentProps } from 'tsdocgen';
+import type { PropertyComponentProps } from '@tsdocgen/core';
 
 const { Paragraph } = Typography;
 

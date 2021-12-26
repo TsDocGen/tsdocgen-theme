@@ -25,13 +25,8 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
         <Layout style={{ height: '100%' }}>
             <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
                 <div className="logo" />
-                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-                    <Menu.Item key="1">nav 1</Menu.Item>
-                    <Menu.Item key="2">nav 2</Menu.Item>
-                    <Menu.Item key="3">nav 3</Menu.Item>
-                </Menu>
             </Header>
-            <Layout style={{ marginTop: '64px' }}>
+            <Layout style={{ marginTop: '64px', overflow: 'hidden' }}>
                 <Sider width={200} className="site-layout-background">
                     <Menu
                         mode="inline"
@@ -59,7 +54,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
                         </SubMenu>
                     </Menu>
                 </Sider>
-                <Layout style={{ padding: '0 24px 24px' }}>
+                <Layout style={{ padding: '0 24px 24px', overflow: 'hidden' }}>
                     <Breadcrumb style={{ margin: '16px 0' }}>
                         <Breadcrumb.Item>Classes</Breadcrumb.Item>
                         <Breadcrumb.Item>Doc</Breadcrumb.Item>
