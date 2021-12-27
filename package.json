@@ -1,6 +1,6 @@
 {
   "name": "@tsdocgen/themes",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Theme base for tsdocgen",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,12 +10,13 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "yarn run build"
     }
   },
   "author": "Zerry Hogan",
   "license": "ISC",
   "devDependencies": {
-    "@tsdocgen/core": "^0.0.2",
+    "@tsdocgen/core": "^0.0.10",
     "@types/glob": "^7.1.4",
     "@types/lodash": "^4.14.173",
     "@types/node": "^16.9.1",
