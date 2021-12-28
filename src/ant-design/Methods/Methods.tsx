@@ -8,9 +8,9 @@ const { Title } = Typography;
 const Methods: React.FC<MethodsComponentProps> = ({ methods }) => {
     return (
         <div>
-            <Title>Methods</Title>
+            <Title level={3}>Methods</Title>
             {methods.map((method) => (
-                    <Method method={method} />
+                    <Method method={method} key={method.name} />
             ))}
         </div>
     );

@@ -5,16 +5,16 @@ import Methods from '../Methods';
 
 const { Title, Paragraph } = Typography;
 
-const Page: React.FC<PageProps> = ({ doc }) => {
+export const Page: React.FC<PageProps> = ({ doc }) => {
     return (
         <>
-            <Title>{doc.name}</Title>
+            <Title level={2}>{doc.name}</Title>
             <Paragraph>
                 {doc.jsDoc.description}
             </Paragraph>
             <Properties properties={doc.properties} />
             {doc.type === 'class' ? (
-                <Methods methods={[...doc.instanceMethods, ...doc.staticMethods]} />
+                <Methods methods={doc.methods} />
             ) : null}
         </>
     );

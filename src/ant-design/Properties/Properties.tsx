@@ -8,9 +8,9 @@ const { Title } = Typography;
 const Properties: React.FC<PropertiesComponentProps> = ({ properties }) => {
     return (
         <div>
-            <Title>Properties</Title>
+            <Title level={3}>Properties</Title>
             {properties.map((property) => (
-                    <Property property={property} />
+                    <Property property={property} key={property.name} />
             ))}
         </div>
     );
