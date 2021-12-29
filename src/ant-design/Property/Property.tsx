@@ -1,6 +1,6 @@
 import { Tag, Typography } from "antd";
 import React from "react";
-import type { PropertyComponentProps } from '@tsdocgen/core';
+import type { PropertyComponentProps } from '@tsdocgen/core/types/theme';
 import { Card } from "../Card";
 import getScopeColor from "../Utils/getScopeColor";
 
@@ -21,7 +21,7 @@ const Property: React.FC<PropertyComponentProps> = ({ property }) => {
     return (
         <Card title={<CardHeader property={property}/>}>
             <Paragraph>
-                {property.jsDoc.description}
+                {property.description}
             </Paragraph>
             <code>
                 {JSON.stringify(property, null, 2)}

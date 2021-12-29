@@ -1,6 +1,6 @@
 {
   "name": "@tsdocgen/themes",
-  "version": "0.0.6",
+  "version": "0.0.13",
   "description": "Theme base for tsdocgen",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,7 +23,7 @@
     "@storybook/addon-essentials": "^6.4.9",
     "@storybook/addon-links": "^6.4.9",
     "@storybook/react": "^6.4.9",
-    "@tsdocgen/core": "^0.0.13",
+    "@tsdocgen/core": "^0.0.22",
     "@types/glob": "^7.1.4",
     "@types/lodash": "^4.14.173",
     "@types/node": "^16.9.1",

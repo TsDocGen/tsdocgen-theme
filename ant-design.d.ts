@@ -1,1 +1,1 @@
-export * from './dist/ant-design';
+export { default } from './dist/ant-design';

@@ -2,11 +2,12 @@ import React from 'react';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 import { createGlobalStyle } from 'styled-components';
+import type { LayoutProps } from '@tsdocgen/core/types/theme';
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
-type AppLayoutProps = {
+type AppLayoutProps = LayoutProps & {
     projectName: string
 };
 

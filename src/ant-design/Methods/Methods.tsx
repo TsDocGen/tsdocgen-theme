@@ -1,6 +1,6 @@
 import { Typography } from "antd";
 import React from "react";
-import type { MethodsComponentProps } from '@tsdocgen/core';
+import type { MethodsComponentProps } from '@tsdocgen/core/types/theme';
 import Method from "../Method";
 
 const { Title } = Typography;

@@ -1,5 +1,5 @@
 import { Typography } from 'antd';
-import type { PageProps } from '@tsdocgen/core';
+import type { PageProps } from '@tsdocgen/core/types/theme';
 import Properties from '../Properties';
 import Methods from '../Methods';
 
@@ -12,7 +12,9 @@ export const Page: React.FC<PageProps> = ({ doc }) => {
             <Paragraph>
                 {doc.jsDoc.description}
             </Paragraph>
-            <Properties properties={doc.properties} />
+            {'properties' in doc ? (
+                <Properties properties={doc.properties} />
+            ) : null}
             {doc.type === 'class' ? (
                 <Methods methods={doc.methods} />
             ) : null}

@@ -1,1 +1,1 @@
-export * as AntDesignTheme from './ant-design';
+export { default as AntDesignTheme } from './ant-design';

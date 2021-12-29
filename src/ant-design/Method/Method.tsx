@@ -1,6 +1,6 @@
 import { Typography, Collapse, Tag } from "antd";
 import React from "react";
-import type { MethodComponentProps } from '@tsdocgen/core';
+import type { MethodComponentProps } from '@tsdocgen/core/types/theme';
 import { Card } from "../Card";
 import getScopeColor from "../Utils/getScopeColor";
 
