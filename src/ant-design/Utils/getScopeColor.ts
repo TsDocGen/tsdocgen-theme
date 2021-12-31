@@ -11,6 +11,7 @@ function getScopeColor(scope: string) {
     else if (scope === 'protected') {
         return 'orange';
     }
+    return 'gray';
 }
 
 export default getScopeColor;

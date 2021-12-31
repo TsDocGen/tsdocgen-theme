@@ -7,7 +7,7 @@ import type { LayoutProps } from '@tsdocgen/core/types/theme';
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
-type AppLayoutProps = LayoutProps & {
+export type AppLayoutProps = LayoutProps & {
     projectName: string
 };
 

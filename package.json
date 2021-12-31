@@ -1,6 +1,6 @@
 {
   "name": "@tsdocgen/themes",
-  "version": "0.0.14",
+  "version": "0.0.22",
   "description": "Theme base for tsdocgen",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,8 @@
     "build": "yarn build:clean && yarn build:babel && yarn build:dts",
     "prepublishOnly": "yarn run build",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "release": "yarn publish --access public "
   },
   "husky": {
     "hooks": {
@@ -30,14 +31,15 @@
     "@storybook/addon-essentials": "^6.4.9",
     "@storybook/addon-links": "^6.4.9",
     "@storybook/react": "^6.4.9",
-    "@tsdocgen/core": "^0.0.22",
+    "@tsdocgen/core": "^0.0.37",
     "@types/glob": "^7.1.4",
     "@types/lodash": "^4.14.173",
     "@types/node": "^16.9.1",
     "@types/react-helmet": "^6.1.2",
     "@types/styled-components": "^5.1.14",
     "babel-loader": "^8.2.3",
-    "husky": "^7.0.2"
+    "husky": "^7.0.2",
+    "styled-components": "^5.3.3"
   },
   "dependencies": {
     "@types/react": "^17.0.21",
@@ -47,11 +49,15 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.3.1",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "react": "16.x || 17.x",
+    "react-dom": "16.x || 17.x",
+    "styled-components": "4.x || 5.x",
+    "@tsdocgen/core": "0.x"
+  },
   "files": [
     "dist",
     "ant-design.d.ts",
