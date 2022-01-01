@@ -3,20 +3,27 @@ import '../Registry/RegistryExport';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Page } from './Page';
+import { DocPage } from './DocPage';
 
 export default {
-  title: 'Page',
-  component: Page,
+  title: 'DocPage',
+  component: DocPage,
   argTypes: {
   },
-} as ComponentMeta<typeof Page>;
+} as ComponentMeta<typeof DocPage>;
 
-const doc: any = {
+const page: any = {
+  type: 'DocPage',
+  url: '/classes/BaseDoc',
+  path: '/models/documentation/BaseDoc.ts',
+  relativePath: '/src/models/documentation/BaseDoc.ts',
+  navigation: [],
+  doc: {
     id: '/src/models/documentation/BaseDoc.ts:17',
     type: 'class',
     name: 'BaseDoc',
     isDefaultExport: true,
+    url: '#BaseDoc',
     jsDoc: {
       description: '\nThe base representation for all documentation nodes.',
       tags: [
@@ -56,92 +63,98 @@ const doc: any = {
     isAbstract: false,
     methods: [
       {
-        id: '/src/models/documentation/BaseDoc.ts:58',
+        id: '/src/models/documentation/BaseDoc.ts:60',
         type: 'method',
         name: 'toJSON',
         isDefaultExport: false,
+        url: '#toJSON',
         jsDoc: {
           description: 'Returns a JSON representation of a doc.',
           tags: []
         },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-        startLineNumber: 58,
+        startLineNumber: 60,
         returnType: 'BaseDocJSON<T> & Record<string, any>',
         hasQuestionToken: false,
         scope: 'public',
         parameters: []
       },
       {
-        id: '/src/models/documentation/BaseDoc.ts:75',
+        id: '/src/models/documentation/BaseDoc.ts:78',
         type: 'method',
         name: 'traverse',
         isDefaultExport: false,
+        url: '#traverse',
         jsDoc: { description: "Traverses a doc and its' children", tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-        startLineNumber: 75,
+        startLineNumber: 78,
         returnType: 'void',
         hasQuestionToken: false,
         scope: 'public',
         parameters: []
       },
       {
-        id: '/src/models/documentation/BaseDoc.ts:80',
+        id: '/src/models/documentation/BaseDoc.ts:83',
         type: 'method',
         name: 'getReturnType',
         isDefaultExport: false,
+        url: '#getReturnType',
         jsDoc: {
           description: 'Gets the return type of the doc as a string.',
           tags: []
         },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-        startLineNumber: 80,
+        startLineNumber: 83,
         returnType: 'string',
         hasQuestionToken: false,
         scope: 'public',
         parameters: []
       },
       {
-        id: '/src/models/documentation/BaseDoc.ts:94',
+        id: '/src/models/documentation/BaseDoc.ts:97',
         type: 'method',
         name: 'toString',
         isDefaultExport: false,
+        url: '#toString',
         jsDoc: {
           description: 'Returns a string representation of a doc.',
           tags: []
         },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-        startLineNumber: 94,
+        startLineNumber: 97,
         returnType: 'string',
         hasQuestionToken: false,
         scope: 'public',
         parameters: []
       },
       {
-        id: '/src/models/documentation/BaseDoc.ts:99',
+        id: '/src/models/documentation/BaseDoc.ts:102',
         type: 'method',
         name: 'setDescription',
         isDefaultExport: false,
+        url: '#setDescription',
         jsDoc: { description: 'Sets the description for the doc.', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-        startLineNumber: 99,
+        startLineNumber: 102,
         returnType: 'void',
         hasQuestionToken: false,
         scope: 'public',
         parameters: [
           {
-            id: '/src/models/documentation/BaseDoc.ts:99',
+            id: '/src/models/documentation/BaseDoc.ts:102',
             type: 'parameter',
             name: 'description',
             isDefaultExport: false,
+            url: '#description',
             jsDoc: { description: '', tags: [] },
             isExported: false,
             sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-            startLineNumber: 99,
+            startLineNumber: 102,
             hasOverrideKeyword: false,
             hasQuestionToken: false,
             isReadonly: false,
@@ -150,27 +163,29 @@ const doc: any = {
         ]
       },
       {
-        id: '/src/models/documentation/BaseDoc.ts:104',
+        id: '/src/models/documentation/BaseDoc.ts:107',
         type: 'method',
         name: 'setTags',
         isDefaultExport: false,
+        url: '#setTags',
         jsDoc: { description: 'Sets the tags for the doc.', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-        startLineNumber: 104,
+        startLineNumber: 107,
         returnType: 'void',
         hasQuestionToken: false,
         scope: 'public',
         parameters: [
           {
-            id: '/src/models/documentation/BaseDoc.ts:104',
+            id: '/src/models/documentation/BaseDoc.ts:107',
             type: 'parameter',
             name: 'tags',
             isDefaultExport: false,
+            url: '#tags',
             jsDoc: { description: '', tags: [] },
             isExported: false,
             sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-            startLineNumber: 104,
+            startLineNumber: 107,
             hasOverrideKeyword: false,
             hasQuestionToken: false,
             isReadonly: false,
@@ -179,80 +194,86 @@ const doc: any = {
         ]
       },
       {
-        id: '/src/models/documentation/BaseDoc.ts:110',
+        id: '/src/models/documentation/BaseDoc.ts:113',
         type: 'method',
         name: 'getJSDocs',
         isDefaultExport: false,
+        url: '#getJSDocs',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-        startLineNumber: 110,
+        startLineNumber: 113,
         returnType: 'JSDoc[]',
         hasQuestionToken: false,
         scope: 'protected',
         parameters: []
       },
       {
-        id: '/src/models/documentation/BaseDoc.ts:119',
+        id: '/src/models/documentation/BaseDoc.ts:122',
         type: 'method',
         name: 'addToSymbolCache',
         isDefaultExport: false,
+        url: '#addToSymbolCache',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-        startLineNumber: 119,
+        startLineNumber: 122,
         returnType: 'void',
         hasQuestionToken: false,
         scope: 'private',
         parameters: []
       },
       {
-        id: '/src/models/documentation/BaseDoc.ts:125',
+        id: '/src/models/documentation/BaseDoc.ts:128',
         type: 'method',
         name: 'getIsDefaultExport',
         isDefaultExport: false,
+        url: '#getIsDefaultExport',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-        startLineNumber: 125,
+        startLineNumber: 128,
         returnType: 'boolean',
         hasQuestionToken: false,
         scope: 'private',
         parameters: []
       },
       {
-        id: '/src/models/documentation/BaseDoc.ts:132',
+        id: '/src/models/documentation/BaseDoc.ts:135',
         type: 'method',
         name: 'getStructure',
         isDefaultExport: false,
+        url: '#getStructure',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-        startLineNumber: 132,
+        startLineNumber: 135,
         returnType: 'S | null',
         hasQuestionToken: false,
         scope: 'private',
         parameters: []
       },
       {
-        id: '/src/models/documentation/BaseDoc.ts:139',
+        id: '/src/models/documentation/BaseDoc.ts:142',
         type: 'method',
         name: 'getName',
         isDefaultExport: false,
+        url: '#getName',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-        startLineNumber: 139,
+        startLineNumber: 142,
         returnType: 'string',
         hasQuestionToken: false,
         scope: 'private',
         parameters: []
       },
       {
-        id: '/src/models/documentation/BaseDoc.ts:154',
+        id: '/src/models/documentation/BaseDoc.ts:157',
         type: 'method',
         name: 'formatJsDocs',
         isDefaultExport: false,
+        url: '#formatJsDocs',
         jsDoc: {
           description: '\nParses the jsDocs description and tags. \n',
           tags: [
@@ -270,20 +291,21 @@ const doc: any = {
         },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-        startLineNumber: 154,
+        startLineNumber: 157,
         returnType: 'TsDocGenDoc[]',
         hasQuestionToken: false,
         scope: 'private',
         parameters: [
           {
-            id: '/src/models/documentation/BaseDoc.ts:155',
+            id: '/src/models/documentation/BaseDoc.ts:158',
             type: 'parameter',
             name: 'docs',
             isDefaultExport: false,
+            url: '#docs',
             jsDoc: { description: "An array of JsDoc's", tags: [] },
             isExported: false,
             sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-            startLineNumber: 155,
+            startLineNumber: 158,
             hasOverrideKeyword: false,
             hasQuestionToken: false,
             isReadonly: false,
@@ -292,10 +314,11 @@ const doc: any = {
         ]
       },
       {
-        id: '/src/models/documentation/BaseDoc.ts:177',
+        id: '/src/models/documentation/BaseDoc.ts:180',
         type: 'method',
         name: 'setDescriptionAndTags',
         isDefaultExport: false,
+        url: '#setDescriptionAndTags',
         jsDoc: {
           description: '\n' +
             'Extracts the description and tags from the JsDoc associated with the node.',
@@ -303,7 +326,7 @@ const doc: any = {
         },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-        startLineNumber: 177,
+        startLineNumber: 180,
         returnType: 'void',
         hasQuestionToken: false,
         scope: 'private',
@@ -316,6 +339,7 @@ const doc: any = {
         type: 'type-parameter',
         name: 'T',
         isDefaultExport: false,
+        url: '#T',
         jsDoc: { description: 'The document type', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
@@ -328,6 +352,7 @@ const doc: any = {
         type: 'type-parameter',
         name: 'N',
         isDefaultExport: false,
+        url: '#N',
         jsDoc: { description: 'Generic Node type from `ts-morph`', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
@@ -340,6 +365,7 @@ const doc: any = {
         type: 'type-parameter',
         name: 'S',
         isDefaultExport: false,
+        url: '#S',
         jsDoc: {
           description: 'Generic Structure type from `ts-morph`',
           tags: []
@@ -355,6 +381,7 @@ const doc: any = {
         type: 'type-parameter',
         name: 'P',
         isDefaultExport: false,
+        url: '#P',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
@@ -369,6 +396,7 @@ const doc: any = {
         type: 'property',
         name: 'id',
         isDefaultExport: false,
+        url: '#id',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
@@ -383,6 +411,7 @@ const doc: any = {
         type: 'property',
         name: 'description',
         isDefaultExport: false,
+        url: '#description',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
@@ -397,6 +426,7 @@ const doc: any = {
         type: 'property',
         name: 'tags',
         isDefaultExport: false,
+        url: '#tags',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
@@ -411,6 +441,7 @@ const doc: any = {
         type: 'property',
         name: 'node',
         isDefaultExport: false,
+        url: '#node',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
@@ -425,6 +456,7 @@ const doc: any = {
         type: 'property',
         name: 'name',
         isDefaultExport: false,
+        url: '#name',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
@@ -439,6 +471,7 @@ const doc: any = {
         type: 'property',
         name: 'kind',
         isDefaultExport: false,
+        url: '#kind',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
@@ -453,6 +486,7 @@ const doc: any = {
         type: 'property',
         name: 'structure',
         isDefaultExport: false,
+        url: '#structure',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
@@ -467,6 +501,7 @@ const doc: any = {
         type: 'property',
         name: 'type',
         isDefaultExport: false,
+        url: '#type',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
@@ -481,6 +516,7 @@ const doc: any = {
         type: 'property',
         name: 'isDefaultExport',
         isDefaultExport: false,
+        url: '#isDefaultExport',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
@@ -495,6 +531,7 @@ const doc: any = {
         type: 'property',
         name: 'symbol',
         isDefaultExport: false,
+        url: '#symbol',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
@@ -509,6 +546,7 @@ const doc: any = {
         type: 'property',
         name: 'tsType',
         isDefaultExport: false,
+        url: '#tsType',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
@@ -523,6 +561,7 @@ const doc: any = {
         type: 'property',
         name: 'context',
         isDefaultExport: false,
+        url: '#context',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
@@ -537,6 +576,7 @@ const doc: any = {
         type: 'property',
         name: 'sourceFileRelativePath',
         isDefaultExport: false,
+        url: '#sourceFileRelativePath',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
@@ -551,6 +591,7 @@ const doc: any = {
         type: 'property',
         name: 'startLineNumber',
         isDefaultExport: false,
+        url: '#startLineNumber',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
@@ -563,12 +604,28 @@ const doc: any = {
       {
         id: '/src/models/documentation/BaseDoc.ts:32',
         type: 'property',
-        name: 'parent',
+        name: 'url',
         isDefaultExport: false,
+        url: '#url',
         jsDoc: { description: '', tags: [] },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
         startLineNumber: 32,
+        hasQuestionToken: false,
+        isReadonly: false,
+        returnType: '',
+        scope: 'public'
+      },
+      {
+        id: '/src/models/documentation/BaseDoc.ts:33',
+        type: 'property',
+        name: 'parent',
+        isDefaultExport: false,
+        url: '#parent',
+        jsDoc: { description: '', tags: [] },
+        isExported: false,
+        sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
+        startLineNumber: 33,
         hasQuestionToken: true,
         isReadonly: false,
         returnType: '',
@@ -577,87 +634,93 @@ const doc: any = {
     ],
     constructors: [
       {
-        id: '/src/models/documentation/BaseDoc.ts:34',
+        id: '/src/models/documentation/BaseDoc.ts:35',
         type: 'constructor',
         name: 'constructor',
         isDefaultExport: false,
+        url: '#constructor-1',
         jsDoc: {
           description: '\nThe base representation for all documentation nodes.',
           tags: []
         },
         isExported: false,
         sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-        startLineNumber: 34,
+        startLineNumber: 35,
         returnType: 'BaseDoc<T, N, S, P>',
         parameters: [
           {
-            id: '/src/models/documentation/BaseDoc.ts:34',
+            id: '/src/models/documentation/BaseDoc.ts:35',
             type: 'parameter',
             name: 'node',
             isDefaultExport: false,
+            url: '#node',
             jsDoc: { description: 'The ts-morph node', tags: [] },
             isExported: false,
             sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-            startLineNumber: 34,
+            startLineNumber: 35,
             hasOverrideKeyword: false,
             hasQuestionToken: false,
             isReadonly: false,
             scope: undefined
           },
           {
-            id: '/src/models/documentation/BaseDoc.ts:34',
+            id: '/src/models/documentation/BaseDoc.ts:35',
             type: 'parameter',
             name: 'type',
             isDefaultExport: false,
+            url: '#type',
             jsDoc: {
               description: 'The type of node such as `method`',
               tags: []
             },
             isExported: false,
             sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-            startLineNumber: 34,
+            startLineNumber: 35,
             hasOverrideKeyword: false,
             hasQuestionToken: false,
             isReadonly: false,
             scope: undefined
           },
           {
-            id: '/src/models/documentation/BaseDoc.ts:34',
+            id: '/src/models/documentation/BaseDoc.ts:35',
             type: 'parameter',
             name: 'context',
             isDefaultExport: false,
+            url: '#context',
             jsDoc: { description: 'The TsDocGenContext.', tags: [] },
             isExported: false,
             sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-            startLineNumber: 34,
+            startLineNumber: 35,
             hasOverrideKeyword: false,
             hasQuestionToken: false,
             isReadonly: false,
             scope: undefined
           },
           {
-            id: '/src/models/documentation/BaseDoc.ts:34',
+            id: '/src/models/documentation/BaseDoc.ts:35',
             type: 'parameter',
             name: 'sourceFileRelativePath',
             isDefaultExport: false,
+            url: '#sourceFileRelativePath',
             jsDoc: { description: '', tags: [] },
             isExported: false,
             sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-            startLineNumber: 34,
+            startLineNumber: 35,
             hasOverrideKeyword: false,
             hasQuestionToken: false,
             isReadonly: false,
             scope: undefined
           },
           {
-            id: '/src/models/documentation/BaseDoc.ts:34',
+            id: '/src/models/documentation/BaseDoc.ts:35',
             type: 'parameter',
             name: 'parent',
             isDefaultExport: false,
+            url: '#parent',
             jsDoc: { description: 'The parent/owner doc.', tags: [] },
             isExported: false,
             sourceFileRelativePath: '/src/models/documentation/BaseDoc.ts',
-            startLineNumber: 34,
+            startLineNumber: 35,
             hasOverrideKeyword: false,
             hasQuestionToken: true,
             isReadonly: false,
@@ -666,13 +729,54 @@ const doc: any = {
         ]
       }
     ]
-  };
+  },
+  tableOfContents: {
+    constructor: [ { name: 'constructor', url: '#constructor-1' } ],
+    signature: [],
+    property: [
+      { name: 'id', url: '#id' },
+      { name: 'description', url: '#description' },
+      { name: 'tags', url: '#tags' },
+      { name: 'node', url: '#node' },
+      { name: 'name', url: '#name' },
+      { name: 'kind', url: '#kind' },
+      { name: 'structure', url: '#structure' },
+      { name: 'type', url: '#type' },
+      { name: 'isDefaultExport', url: '#isDefaultExport' },
+      { name: 'symbol', url: '#symbol' },
+      { name: 'tsType', url: '#tsType' },
+      { name: 'context', url: '#context' },
+      {
+        name: 'sourceFileRelativePath',
+        url: '#sourceFileRelativePath'
+      },
+      { name: 'startLineNumber', url: '#startLineNumber' },
+      { name: 'url', url: '#url' },
+      { name: 'parent', url: '#parent' }
+    ],
+    method: [
+      { name: 'toJSON', url: '#toJSON' },
+      { name: 'traverse', url: '#traverse' },
+      { name: 'getReturnType', url: '#getReturnType' },
+      { name: 'toString', url: '#toString' },
+      { name: 'setDescription', url: '#setDescription' },
+      { name: 'setTags', url: '#setTags' },
+      { name: 'getJSDocs', url: '#getJSDocs' },
+      { name: 'addToSymbolCache', url: '#addToSymbolCache' },
+      { name: 'getIsDefaultExport', url: '#getIsDefaultExport' },
+      { name: 'getStructure', url: '#getStructure' },
+      { name: 'getName', url: '#getName' },
+      { name: 'formatJsDocs', url: '#formatJsDocs' },
+      { name: 'setDescriptionAndTags', url: '#setDescriptionAndTags' }
+    ]
+  }
+};
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Page> = (args) => <Page {...args} doc={doc} />;
+const Template: ComponentStory<typeof DocPage> = (args) => <DocPage {...args}/>;
 
 export const Primary = Template.bind({});
 
 Primary.args = {
-    doc
+    page
 };

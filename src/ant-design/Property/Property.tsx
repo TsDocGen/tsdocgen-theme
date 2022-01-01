@@ -19,7 +19,7 @@ const CardHeader: React.FC<PropertyComponentProps> = ({ property }) => {
 
 const Property: React.FC<PropertyComponentProps> = ({ property }) => {
     return (
-        <Card title={<CardHeader property={property}/>}>
+        <Card title={<CardHeader property={property}/>} id={property.name}>
             <Paragraph>
                 {property.jsDoc.description}
             </Paragraph>

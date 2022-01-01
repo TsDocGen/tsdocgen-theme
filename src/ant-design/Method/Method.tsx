@@ -25,8 +25,7 @@ const PanelHeader: React.FC<MethodComponentProps> = ({ method }) => {
 
 const Method: React.FC<MethodComponentProps> = ({ method }) => {
     return (
-        <Card title={<CardHeader method={method} />}>
-
+        <Card title={<CardHeader method={method} />} id={method.name}>
             <Collapse defaultActiveKey="1">
                 <Collapse.Panel header={<PanelHeader method={method} />} key="1">
                     <Paragraph>

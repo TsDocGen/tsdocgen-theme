@@ -1,13 +1,16 @@
 import React from 'react';
 import { Typography } from 'antd';
-import type { PageProps } from '@tsdocgen/core/types/theme';
+import type { DocPageComponentProps } from '@tsdocgen/core/types/theme';
 import Registry from '../Registry';
+import TableOfContents from '../TableOfContents';
 
 const { Title, Paragraph } = Typography;
 
-export const Page: React.FC<PageProps> = ({ doc }) => {
+export const DocPage: React.FC<DocPageComponentProps> = ({ page }) => {
     const Properties = Registry.get('Properties');
     const Methods = Registry.get('Methods');
+
+    const { doc, tableOfContents } = page;
 
     return (
         <>
@@ -15,6 +18,7 @@ export const Page: React.FC<PageProps> = ({ doc }) => {
             <Paragraph>
                 {doc.jsDoc.description}
             </Paragraph>
+            <TableOfContents tableOfContents={tableOfContents} />
             {'properties' in doc ? (
                 <Properties properties={doc.properties} />
             ) : null}
@@ -25,4 +29,4 @@ export const Page: React.FC<PageProps> = ({ doc }) => {
     );
 }
 
-export default Page;
+export default DocPage;
