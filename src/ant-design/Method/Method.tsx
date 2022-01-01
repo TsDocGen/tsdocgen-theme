@@ -26,8 +26,12 @@ const PanelHeader: React.FC<MethodComponentProps> = ({ method }) => {
 const Method: React.FC<MethodComponentProps> = ({ method }) => {
     return (
         <Card title={<CardHeader method={method} />}>
+
             <Collapse defaultActiveKey="1">
                 <Collapse.Panel header={<PanelHeader method={method} />} key="1">
+                    <Paragraph>
+                        Source: {method.sourceFileRelativePath}:{method.startLineNumber}
+                    </Paragraph>
                     <Paragraph>
                         {method.jsDoc.description}
                     </Paragraph>

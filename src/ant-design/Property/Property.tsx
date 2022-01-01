@@ -21,7 +21,10 @@ const Property: React.FC<PropertyComponentProps> = ({ property }) => {
     return (
         <Card title={<CardHeader property={property}/>}>
             <Paragraph>
-                {property.description}
+                {property.jsDoc.description}
+            </Paragraph>
+            <Paragraph>
+                Source: {property.sourceFileRelativePath}:{property.startLineNumber}
             </Paragraph>
             <code>
                 {JSON.stringify(property, null, 2)}
